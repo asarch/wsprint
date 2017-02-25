@@ -23,10 +23,10 @@ Activate the enviroment:
 $ cd alpha && . bin/activate
 ```
 
-Install WeasyPrint and the Jinja2 template system:
+Install WeasyPrint and the dependencies:
 
 ```
-(alpha)$ pip --verbose install jinja2 weasyprint
+(alpha)$ pip --verbose install six packaging appdirs jinja2 weasyprint
 ```
 
 ## Render the documents

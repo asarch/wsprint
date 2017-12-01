@@ -9,7 +9,7 @@ from jinja2 import Template
 from jinja2 import Environment
 from jinja2 import FileSystemLoader
 
-import xml.etree.ElementTree as ET
+from lxml import etree
 
 from weasyprint import HTML
 from weasyprint import CSS
@@ -24,13 +24,10 @@ from weasyprint import CSS
 #---------------------------------------------------------------------
 
 def get_title(content):
-	title = ''
-
-	for line in content: 
-		if re.search("<title>", line, re.IGNORECASE) != None:
-			tree = ET.fromstring(line)
-			title = tree.text
-			break
+	#root = etree.fromstring(content.read())
+	#title = root.xpath('//html/head/title/text()')[0]
+	title = ""
+	#print title
 
 	return title
 
